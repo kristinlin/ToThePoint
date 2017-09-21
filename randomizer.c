@@ -16,6 +16,7 @@ Print out the values in the second array
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 int main() {
 
