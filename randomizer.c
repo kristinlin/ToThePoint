@@ -21,27 +21,27 @@ Print out the values in the second array
 int main() {
 
   // rand int arrays
-  int rand1[10];
-  int * rand2[10];
+  int arr1[10];
+  int * arr2[10];
 
   int count;
 
-  printf("RANDOM ARRAY #1 (non-pointers)\n");
+  printf("The original array:\n");
   
   //populating first array with random numbers, except last
   srand( time(NULL) );
   for (count = 0; count < 10; count++) {
-    if (count == 9) {rand1[count] = 0;}
-    else {rand1[count] = rand();}
-    printf("rand1[%d]: %d\n", count, rand1[count]);
+    if (count == 9) {arr1[count] = 0;}
+    else {arr1[count] = rand();}
+    printf("arr1[%d]: %d\n", count, arr1[count]);
   }
 
-  printf("RANDOM ARRAY #2 (pointers, rand1 reversed)\n");
+  printf("The second array:\n");
   
   //populating the second array with pointers in reverse
   for (count = 0; count < 10; count++) {
-    rand2[count] = &rand1[9-count];
-    printf("rand2[%d]: %d\n", count, *rand2[count]);
+    arr2[count] = &arr1[9-count];
+    printf("arr2[%d]: %d\n", count, *arr2[count]);
   }
 
 }
